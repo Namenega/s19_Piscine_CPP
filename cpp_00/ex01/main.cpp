@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 15:19:05 by namenega          #+#    #+#             */
-/*   Updated: 2021/10/20 17:35:19 by namenega         ###   ########.fr       */
+/*   Updated: 2021/10/20 19:44:12 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main(int ac, char **av)
 	print_cringe("V_Assistant : ...", 2);
 	print_cringe("V_Assistant : I erased every data by mistake... 😔😱", 2);
 	print_cringe("V_Assistant : The code monkeys at our headquarters are working VEWY HAWD to fix this! 🙈🙈", 3);
-	print_cringe("V_Assistant : Maybe we should start your Phonebook again ! *blush*", 3);
+	print_cringe("V_Assistant : Maybe we should start your Phonebook again ! *blush*", 2);
 	print_cringe("V_Assistant : Let's start!! 😋😋", 1);
 	print_cringe("V_Assistant : There is no contact yet, try to create one 😼", 2);
 	while (1)

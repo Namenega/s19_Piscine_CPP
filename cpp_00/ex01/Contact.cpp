@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 16:58:53 by namenega          #+#    #+#             */
-/*   Updated: 2021/10/20 18:32:03 by namenega         ###   ########.fr       */
+/*   Updated: 2021/10/20 20:22:27 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,17 @@ void	print_cringe(std::string s, int time)
 	sleep(time);
 }
 
-int		Contact::getFirstName()
+int		Contact::setFirstName()
 {
 	print_cringe("V_Assistant : What's your friend's cutey first name??", 1);
 	std::cout << "YOU : ";
-	if (!getline(std::cin, firstname))
+	if (!getline(std::cin, _firstname))
 		return (-1);
-	while (firstname == "")
+	while (_firstname == "")
 	{
 		print_cringe("V_Assistant : Haaaan! Come on! Write it, write it!!", 1);
 		std::cout << "YOU : ";
-		if (!getline(std::cin, firstname))
+		if (!getline(std::cin, _firstname))
 			return (-1);
 	}
 	print_cringe("V_Assistant : Kawaiiii!! I love it! do you have a crush on this friend?? 😏", 1);

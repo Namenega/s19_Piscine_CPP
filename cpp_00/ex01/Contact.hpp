@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 16:43:11 by namenega          #+#    #+#             */
-/*   Updated: 2021/10/20 18:25:38 by namenega         ###   ########.fr       */
+/*   Updated: 2021/10/20 20:46:42 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,28 +20,30 @@
 class Contact
 {
 	private:
-		std::string	firstname;
-		std::string	lastname;
-		std::string	nickname;
-		std::string	birthday;
-		std::string	phonenumber;
-		std::string	darksec;
+		std::string	_firstname;
+		std::string	_lastname;
+		std::string	_nickname;
+		std::string	_birthday;
+		std::string	_phonenumber;
+		std::string	_darksec;
 	public:
 		Contact();
 
-		int		getFirstName();
-		int		getLastName();
-		int		getNickName();
-		int		getBirthdayDate();
-		int		getPhoneNumber();
-		int		getDarkSecret();
+		//set the value of attribute member
+		int		setFirstName();
+		int		setLastName();
+		int		setNickName();
+		int		setBirthdayDate();
+		int		setPhoneNumber();
+		int		setDarkSecret();
 
-		// std::string	FirstName;
-		// std::string	LastName;
-		// std::string	NickName;
-		// std::string	BirthdayDate;
-		// std::string	PhoneNumber;
-		// std::string	DarkestSecret;
+		//Return the value of attribute member
+		// std::string	getFirstName() const;
+		// std::string	getLastName() const;
+		// std::string	getNickName() const;
+		// std::string	getBirthdayDate() const;
+		// std::string	getPhoneNumber() const;
+		// std::string	getDarkestSecret() const;
 		// ~Contact();
 };
 

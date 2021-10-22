@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 16:58:53 by namenega          #+#    #+#             */
-/*   Updated: 2021/10/22 17:26:34 by namenega         ###   ########.fr       */
+/*   Updated: 2021/10/22 18:09:10 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int				Contact::setLastName()
 	while (_lastname == "")
 	{
 		print_cringe("V_Assistant : Come on! Tell me !! 😏", 1);
+		std::cout << "YOU : ";
 		if (!getline(std::cin, _lastname))
 			return (-1);
 	}
@@ -81,6 +82,7 @@ int				Contact::setNickName()
 	while (_nickname == "")
 	{
 		print_cringe("V_Assistant : Don't be shy! I want to know! 😭😭", 1);
+		std::cout << "YOU : ";
 		if (!getline(std::cin, _nickname))
 			return (-1);
 	}
@@ -104,6 +106,7 @@ int				Contact::setBirthdayDate()
 	while (_birthday == "")
 	{
 		print_cringe("V_Assistant : You better not forget your friend's birthday !", 1);
+		std::cout << "YOU : ";
 		if (!getline(std::cin, _birthday))
 			return (-1);
 	}
@@ -127,6 +130,7 @@ int				Contact::setPhoneNumber()
 	while (_phonenumber == "")
 	{
 		print_cringe("V_Assistant : Come on, a phonebook without phone number ... hehe", 1);
+		std::cout << "YOU : ";
 		if (!getline(std::cin, _phonenumber))
 			return (-1);
 	}
@@ -151,6 +155,7 @@ int				Contact::setDarkestSecret()
 	while (_darksecret == "")
 	{
 		print_cringe("V_Assistant : Aaaanw you don't want to tell me? Pleaaaase 🥺", 1);
+		std::cout << "YOU : ";
 		if (!getline(std::cin, _darksecret))
 			return (-1);
 	}

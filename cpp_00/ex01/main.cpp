@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 15:19:05 by namenega          #+#    #+#             */
-/*   Updated: 2021/10/20 19:44:12 by namenega         ###   ########.fr       */
+/*   Updated: 2021/10/22 18:03:54 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,15 +49,24 @@ int main(int ac, char **av)
 			return (-1);
 		if (line == "ADD")
 		{
-			print_cringe("V_Assistant : Let's add a new FRIEND!! 💪", 1);
-			print_cringe("V_Assistant : OK OK! I want to know everything about it!! 🤓", 1);
 			if (pb.AddContact() == -1)
 				return (-1);
 			std::cout << std::endl;
 		}
 		else if (line == "SEARCH")
 		{
-			print_cringe("V_Assistant : Who are you looking for? 👀", 1);
+			if (pb.getNumberContact() == 0)
+			{
+				print_cringe("V_Assistant : Yikes, you don't have any friends yet 😢", 1);
+				print_cringe("V_Assistant : Try ADD one", 1);
+			}
+			else
+			{
+				print_cringe("V_Assistant : Who are you looking for? 👀", 1);
+				// if (pb.SearchContact() == -1)
+				// 	return (-1);
+			}
+			
 			std::cout << std::endl;
 		}
 		else if (line == "EXIT")

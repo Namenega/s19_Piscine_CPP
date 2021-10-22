@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 17:01:49 by namenega          #+#    #+#             */
-/*   Updated: 2021/10/20 20:01:33 by namenega         ###   ########.fr       */
+/*   Updated: 2021/10/22 17:47:58 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,11 @@ class Phonebook
 		int		AddContact();
 		int		SearchContact();
 		void	PrintContact();
+		
+		int		getNumberContact() const;
+
 		~Phonebook();
+
 	private:
 		Contact		_contact[8];
 		int			_ContactNumber;

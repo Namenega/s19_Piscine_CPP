@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pyg <pyg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 16:43:11 by namenega          #+#    #+#             */
-/*   Updated: 2021/10/22 16:52:07 by namenega         ###   ########.fr       */
+/*   Updated: 2021/10/25 14:11:47 by pyg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ class Contact
 		std::string	_phonenumber;
 		std::string	_darksecret;
 	public:
-		Contact();
+		Contact();	//Constructor
+		~Contact();	//Destructor
 
 		//set the value of attribute member
 		int		setFirstName();
@@ -45,7 +46,11 @@ class Contact
 		std::string	getBirthdayDate() const;
 		std::string	getPhoneNumber() const;
 		std::string	getDarkestSecret() const;
-		// ~Contact();
+
+		//Set Attribute to be print in Agenda
+		void		setUpFirstName();
+		void		setUpLastName();
+		void		setUpNickname();
 };
 
 // Contact::Contact()

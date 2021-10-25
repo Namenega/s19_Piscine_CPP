@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pyg <pyg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 17:01:49 by namenega          #+#    #+#             */
-/*   Updated: 2021/10/22 17:47:58 by namenega         ###   ########.fr       */
+/*   Updated: 2021/10/25 14:43:31 by pyg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
+
 # include "Contact.hpp"
+# include <sstream>
 
 class Phonebook
 {

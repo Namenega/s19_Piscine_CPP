@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pyg <pyg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 16:58:53 by namenega          #+#    #+#             */
-/*   Updated: 2021/10/22 18:09:10 by namenega         ###   ########.fr       */
+/*   Updated: 2021/10/25 15:02:54 by pyg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	print_cringe(std::string s, int time)
 
 /**************************** Get and set Firstname ***************************/
 
-int		Contact::setFirstName()
+int				Contact::setFirstName()
 {
 	print_cringe("V_Assistant : Let's add a new FRIEND!! 💪", 1);
 	print_cringe("V_Assistant : OK OK! I want to know everything about it!! 🤓", 1);
@@ -45,6 +45,36 @@ int		Contact::setFirstName()
 std::string		Contact::getFirstName() const
 {
 	return (_firstname);
+}
+
+void			Contact::setUpFirstName()
+{
+	int				i = 0;
+	std::string		newFirstName = _firstname;
+
+	if (newFirstName.size() == 10)
+		std::cout << newFirstName << "|";
+	else if (newFirstName.size() < 10)
+	{
+		i = 10 - newFirstName.size();
+		std::cout << newFirstName;
+		while (i)
+		{
+			std::cout << " ";
+			i--;
+		}
+		std::cout << "|";
+	}
+	else if (newFirstName.size() > 10)
+	{
+		i = 0;
+		while (i < 9)
+		{
+			std::cout << newFirstName[i];
+			i++;
+		}
+		std::cout << ".|";
+	}
 }
 
 /**************************** Get and set Lastname ****************************/
@@ -71,6 +101,36 @@ std::string		Contact::getLastName() const
 	return (_lastname);
 }
 
+void			Contact::setUpLastName()
+{
+	int				i = 0;
+	std::string		newLastName = _lastname;
+
+	if (newLastName.size() == 10)
+		std::cout << newLastName << "|";
+	else if (newLastName.size() < 10)
+	{
+		i = 10 - newLastName.size();
+		std::cout << newLastName;
+		while (i)
+		{
+			std::cout << " ";
+			i--;
+		}
+		std::cout << "|";
+	}
+	else if (newLastName.size() > 10)
+	{
+		i = 0;
+		while (i < 9)
+		{
+			std::cout << newLastName[i];
+			i++;
+		}
+		std::cout << ".|";
+	}
+}
+
 /**************************** Get and set Nickname ****************************/
 
 int				Contact::setNickName()
@@ -93,6 +153,36 @@ int				Contact::setNickName()
 std::string		Contact::getNickName() const
 {
 	return (_nickname);
+}
+
+void			Contact::setUpNickname()
+{
+	int				i = 0;
+	std::string		newNickname = _nickname;
+
+	if (newNickname.size() == 10)
+		std::cout << newNickname << "|";
+	else if (newNickname.size() < 10)
+	{
+		i = 10 - newNickname.size();
+		std::cout << newNickname;
+		while (i)
+		{
+			std::cout << " ";
+			i--;
+		}
+		std::cout << "|";
+	}
+	else if (newNickname.size() > 10)
+	{
+		i = 0;
+		while (i < 9)
+		{
+			std::cout << newNickname[i];
+			i++;
+		}
+		std::cout << ".|";
+	}
 }
 
 /************************* Get and set Birthday Date **************************/
@@ -166,4 +256,8 @@ int				Contact::setDarkestSecret()
 std::string		Contact::getDarkestSecret() const
 {
 	return (_darksecret);
+}
+
+Contact::~Contact()
+{
 }

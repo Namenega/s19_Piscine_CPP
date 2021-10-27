@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/27 12:29:36 by pyg               #+#    #+#             */
-/*   Updated: 2021/10/27 16:02:35 by namenega         ###   ########.fr       */
+/*   Created: 2021/10/27 15:54:36 by namenega          #+#    #+#             */
+/*   Updated: 2021/10/27 16:38:15 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,18 @@ Zombie::Zombie(std::string name) : _name(name)
 {
 }
 
-void	Zombie::announce(void)
+void		Zombie::announce()
 {
-	std::cout << this->_name << " : BraiiiiiiinnnzzzZ..." <<std::endl;
+	std::cout << this->_name << " : BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-std::string	Zombie::getName() const
+void		Zombie::setZombieName(std::string name)
 {
-	return (this->_name);
+	this->_name = name;
 }
 
 Zombie::~Zombie()
 {
-	std::cout << this->_name << " has been destroyed." << std::endl;
+	std::cout << "BANG ! " << this->_name << " has been destroyed !" << std::endl;
+	sleep(1);
 }

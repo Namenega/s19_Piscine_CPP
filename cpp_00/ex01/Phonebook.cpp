@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 17:07:15 by namenega          #+#    #+#             */
-/*   Updated: 2021/10/28 09:42:06 by namenega         ###   ########.fr       */
+/*   Updated: 2021/10/28 10:17:41 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ int		Phonebook::SearchContact()
 		return (0);
 	}
 	print_cringe("V_Assistant : What secrets can you friend hide ? 😼", 1);
+	std::cout << std::endl;
 	std::cout << "1. " << _contact[index - 1].getFirstName() << std::endl;
 	std::cout << "2. " << _contact[index - 1].getLastName() << std::endl;
 	std::cout << "3. " << _contact[index - 1].getNickName() << std::endl;

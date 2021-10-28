@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pyg <pyg@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 16:43:11 by namenega          #+#    #+#             */
-/*   Updated: 2021/10/25 14:11:47 by pyg              ###   ########.fr       */
+/*   Updated: 2021/10/28 10:13:53 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,6 @@ class Contact
 		void		setUpLastName();
 		void		setUpNickname();
 };
-
-// Contact::Contact()
-// {
-// }
-
-// Contact::~Contact()
-// {
-// }
 
 void	print_cringe(std::string s, int time);
 

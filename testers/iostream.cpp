@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:24:34 by namenega          #+#    #+#             */
-/*   Updated: 2021/10/28 17:20:17 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/02 13:38:35 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,5 @@ int	main()
 
 	std::ofstream ofs("test.out");
 	ofs << "trop cool le c++" << std::endl;
+	ofs.close();
 }

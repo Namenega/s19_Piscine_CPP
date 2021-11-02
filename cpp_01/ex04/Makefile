@@ -1,13 +1,10 @@
-SRCNAME 	=	main.cpp		\
-				Zombie.cpp		\
-				newZombie.cpp	\
-				randomChump.cpp
+SRCNAME 	=	main.cpp		
 
 SRCS 		= ${SRCNAME}
 
 OBJS 		= ${SRCS:.cpp=.o}
 
-NAME		= zombicito
+NAME		= replace
 
 CXX 		= clang++
 RM 			= rm -f
@@ -25,7 +22,7 @@ CEND		= \033[0m
 
 ${NAME}:	${OBJS}
 		@echo
-		@echo "$(CYELLOW)Compilation of Brainzz$(CEND)"
+		@echo "$(CYELLOW)Compilation of Replace$(CEND)"
 		@echo "$(CGREY)"
 		${CXX} -o ${NAME} ${OBJS}
 		@echo "$(CEND)"
@@ -44,7 +41,7 @@ clean:
 		@echo
 
 fclean:		clean
-		@echo "$(CYELLOW)Deleting .o files and Brainzz$(CEND)"
+		@echo "$(CYELLOW)Deleting .o files and Replace$(CEND)"
 		@echo "$(CGREY)"
 		${RM} ${NAME}
 		@echo "$(CEND)"

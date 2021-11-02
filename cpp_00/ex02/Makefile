@@ -23,7 +23,7 @@ CEND		= \033[0m
 
 ${NAME}:	${OBJS}
 		@echo
-		@echo "$(CYELLOW)Compilation of philo$(CEND)"
+		@echo "$(CYELLOW)Compilation of Account$(CEND)"
 		@echo "$(CGREY)"
 		${CXX} -o ${NAME} ${OBJS}
 		@echo "$(CEND)"
@@ -42,7 +42,7 @@ clean:
 		@echo
 
 fclean:		clean
-		@echo "$(CYELLOW)Deleting .o files and philo$(CEND)"
+		@echo "$(CYELLOW)Deleting .o files and Account$(CEND)"
 		@echo "$(CGREY)"
 		${RM} ${NAME}
 		@echo "$(CEND)"

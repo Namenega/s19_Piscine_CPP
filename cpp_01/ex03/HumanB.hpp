@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 17:56:11 by namenega          #+#    #+#             */
-/*   Updated: 2021/10/27 18:04:34 by namenega         ###   ########.fr       */
+/*   Updated: 2021/10/28 16:19:29 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,20 @@
 
 # include "Weapon.hpp"
 
+//! HumanB n'a pas toujours une Weapon en main : pointeur
+
 class HumanB
 {
 	private:
-		Weapon			_weapon;
 		std::string		_name;
-
+		Weapon			_weapon;
 	public:
 		HumanB();
+		HumanB(std::string name);
 		~HumanB();
 
-	void	attack();
+		void	attack() const;
+		void	setWeapon(Weapon weapon);
 };
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 17:55:28 by namenega          #+#    #+#             */
-/*   Updated: 2021/10/27 18:04:22 by namenega         ###   ########.fr       */
+/*   Updated: 2021/10/28 16:09:44 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,19 @@
 
 # include "Weapon.hpp"
 
+//! HumanA a toujours une Weapon en main : Reference
+
 class HumanA
 {
 	private:
-		Weapon			_weapon;
-		std::string		_name;
-
+		std::string	_name;
+		Weapon		&_weapon;
 	public:
 		HumanA();
+		HumanA(std::string name, Weapon &weapon);
 		~HumanA();
 
-		void	attack();
+		void	attack() const;
 };
 
 #endif

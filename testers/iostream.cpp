@@ -6,19 +6,35 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:24:34 by namenega          #+#    #+#             */
-/*   Updated: 2021/10/20 11:31:16 by namenega         ###   ########.fr       */
+/*   Updated: 2021/10/28 17:20:17 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream> //gere les flux d'entree/sortie
+#include <fstream> //gere les fichiers
 
-int main()
+// int main()
+// {
+// 	int	buf;
+
+// 	std::cout << "Quel age as-tu? : ";
+// 	std::cin >> buf;
+// 	std::cout << "Tu as "<< buf <<" ans" << std::endl;
+// 	//double quotes important pour print une variable dans un std::cout
+// 	return (0);
+// }
+
+
+int	main()
 {
-	int	buf;
+	std::ifstream ifs("numbers"); //creer un stream d'input qui va ouvrir le fichier numbers
+	int dest;
+	unsigned int dest2;
+	ifs >> dest >> dest2;
 
-	std::cout << "Quel age as-tu? : ";
-	std::cin >> buf;
-	std::cout << "Tu as "<< buf <<" ans" << std::endl;
-	//double quotes important pour print une variable dans un std::cout
-	return (0);
+	std::cout << dest << " " << dest2 << std::endl;
+	ifs.close();
+
+	std::ofstream ofs("test.out");
+	ofs << "trop cool le c++" << std::endl;
 }

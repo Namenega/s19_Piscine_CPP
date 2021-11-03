@@ -1,11 +1,11 @@
 SRCNAME 	=	main.cpp		\
-				Karen.cpp
+				Fixed.cpp
 
 SRCS 		= ${SRCNAME}
 
 OBJS 		= ${SRCS:.cpp=.o}
 
-NAME		= karenFilter
+NAME		= rawBits
 
 CXX 		= clang++
 RM 			= rm -f
@@ -23,7 +23,7 @@ CEND		= \033[0m
 
 ${NAME}:	${OBJS}
 		@echo
-		@echo "$(CYELLOW)Compilation of karenFilter$(CEND)"
+		@echo "$(CYELLOW)Compilation of rawbits$(CEND)"
 		@echo "$(CGREY)"
 		${CXX} -o ${NAME} ${OBJS}
 		@echo "$(CEND)"
@@ -42,7 +42,7 @@ clean:
 		@echo
 
 fclean:		clean
-		@echo "$(CYELLOW)Deleting .o files and karenFilter$(CEND)"
+		@echo "$(CYELLOW)Deleting .o files and rawbits$(CEND)"
 		@echo "$(CGREY)"
 		${RM} ${NAME}
 		@echo "$(CEND)"

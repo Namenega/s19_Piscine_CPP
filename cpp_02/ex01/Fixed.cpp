@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 20:41:08 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/04 21:15:44 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/04 22:38:10 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /* ****************************** Constructor ******************************* */
 
-Fixed::Fixed()
+Fixed::Fixed() : _fixedValue(0)
 {
 	std::cout << "Default constructor called" <<std::endl;
 }
@@ -32,7 +32,6 @@ Fixed::Fixed(const Fixed& cpy)
 Fixed::Fixed(const int conv)
 {
 	std::cout << "Int constructor called" << std::endl;
-	// *this = conv;
 	_fixedValue = conv << _nbrBits;
 }
 
@@ -41,7 +40,6 @@ Fixed::Fixed(const int conv)
 Fixed::Fixed(const float conv)
 {
 	std::cout << "Float constructor called" << std::endl;
-	// *this = conv;
 	_fixedValue = roundf(conv * (1 << _nbrBits));
 }
 

@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 21:58:20 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/04 23:45:51 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/04 23:49:22 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ Fixed		Fixed::operator/(Fixed const & rhs) const {
 
 /* *************************** Increment Operator *************************** */
 
-/* *************************** ++i, --i, i++, i-- *************************** */
+/* ******************************** ++i, --i ******************************** */
 
 Fixed &		Fixed::operator++(void) {
 	this->_fixedValue++;
@@ -111,6 +111,8 @@ Fixed &		Fixed::operator--(void) {
 	this->_fixedValue--;
 	return (*this);
 }
+
+/* ******************************** i++, i-- ******************************** */
 
 Fixed		Fixed::operator++(int) {
 	Fixed	cpy(*this);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 16:55:19 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/05 18:37:36 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/06 13:36:53 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,9 @@ int				ClapTrap::getAttackDamage() const {
 /* ******************************* Functions ******************************** */
 
 void			ClapTrap::attack(std::string const & target) {
-	std::cout << "ClapTrap " << this->getName()
+	std::cout << "ClapTrap " << this->_name
 				<< " attack " << target << ", causing "
-				<< this->getAttackDamage() << " points of damage"
+				<< this->_attackDamage << " points of damage"
 				<< std::endl;
 }
 
@@ -86,7 +86,7 @@ void			ClapTrap::takeDamage(unsigned int amount) {
 
 void			ClapTrap::beRepaired(unsigned int amount) {
 	std::cout << "ClapTrap " << this->_name
-				<< " drinks a potion, and restors "
+				<< " drinks a potion, and restores "
 				<< amount << " HitPoints." << std::endl;
 	// this->_hitPoints += amount;
 }

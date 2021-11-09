@@ -41,9 +41,9 @@ clean:
 		@echo
 
 fclean:		clean
-		@echo "$(CYELLOW)Deleting .o files and Replace$(CEND)"
+		@echo "$(CYELLOW)Deleting .o files, FILENAME and Replace$(CEND)"
 		@echo "$(CGREY)"
-		${RM} ${NAME}
+		${RM} ${NAME} FILENAME.replace
 		@echo "$(CEND)"
 		@echo "$(CGREEN)Deleting done !$(CEND)"
 		@echo

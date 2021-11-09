@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 13:58:32 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/06 16:10:11 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/07 18:04:15 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,13 @@ ScavTrap &			ScavTrap::operator=(ScavTrap const & rhs) {
 
 /* ******************************* Operator<< ******************************* */
 
-std::ostream &		operator<<(std::ostream COUT, ScavTrap const & rhs) {
-	COUT << rhs.getName() << std::endl;
-	COUT << rhs.getHitPoints() << std::endl;
-	COUT << rhs.getEnergyPoints() << std::endl;
-	COUT << rhs.getAttackDamage() << std::endl;
-}
+// std::ostream &		operator<<(std::ostream COUT, ScavTrap const & rhs) {
+// 	COUT << rhs.getName() << std::endl;
+// 	COUT << rhs.getHitPoints() << std::endl;
+// 	COUT << rhs.getEnergyPoints() << std::endl;
+// 	COUT << rhs.getAttackDamage() << std::endl;
+// 	return (COUT);
+// }
 
 /* ******************************* Destructor ******************************* */
 

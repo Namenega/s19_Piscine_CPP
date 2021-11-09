@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 12:29:42 by pyg               #+#    #+#             */
-/*   Updated: 2021/10/27 15:17:40 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/09 12:45:26 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Zombie
 
 	public:
 		Zombie();
-		~Zombie();
 		Zombie(std::string	name);
+		~Zombie();
 
 		void		announce(void);
 		std::string	getName() const;
@@ -33,14 +33,5 @@ class Zombie
 
 Zombie*		newZombie(std::string name);
 void		randomChump(std::string name);
-
-// Zombie::Zombie(/* args */)
-// {
-// }
-
-// Zombie::~Zombie()
-// {
-// }
-
 
 #endif

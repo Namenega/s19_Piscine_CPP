@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 12:29:17 by pyg               #+#    #+#             */
-/*   Updated: 2021/10/27 15:42:33 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/09 12:41:17 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int main(void)
 	zombieOne->announce();
 	std::cout << std::endl;
 	sleep(2);
-	printAndSleep("You don't understand what is it, but it gets louder.", 2);
+	printAndSleep("You don't understand what it is, but it gets louder.", 2);
 	std::cout << std::endl;
 	zombieOne->announce();
 	std::cout << std::endl;

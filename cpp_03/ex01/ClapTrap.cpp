@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 12:53:25 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/06 14:14:56 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/09 18:39:38 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /* ****************************** Constructors ****************************** */
 
 ClapTrap::ClapTrap() {
-	std::cout << "Constructor is called" << std::endl;
+	std::cout << "ClapTrap Constructor is called" << std::endl;
 	_name = "";
 	_hitPoints = 10;
 	_energyPoints = 10;
@@ -23,7 +23,7 @@ ClapTrap::ClapTrap() {
 }
 
 ClapTrap::ClapTrap(std::string newName) {
-	std::cout << "Constructor with name is called" << std::endl;
+	std::cout << "ClapTrap Constructor(name) is called" << std::endl;
 	_name = newName;
 	_hitPoints = 10;
 	_energyPoints = 10;
@@ -31,7 +31,7 @@ ClapTrap::ClapTrap(std::string newName) {
 }
 
 ClapTrap::ClapTrap(std::string newName, int hitPoints, int energyPoints, int attackDamage) {
-	std::cout << "Constructor to be inherited from is called" << std::endl;
+	std::cout << "ClapTrap Constructor(inherit) is called" << std::endl;
 	_name = newName;
 	_hitPoints = hitPoints;
 	_energyPoints = energyPoints;
@@ -41,7 +41,7 @@ ClapTrap::ClapTrap(std::string newName, int hitPoints, int energyPoints, int att
 /* **************************** Copy Constructor **************************** */
 
 ClapTrap::ClapTrap(const ClapTrap & cpy) {
-	std::cout << "Constructor copy is called" << std::endl;
+	std::cout << "ClapTrap Constructor copy is called" << std::endl;
 	*this = cpy;
 }
 
@@ -75,12 +75,16 @@ void			ClapTrap::takeDamage(unsigned int amount) {
 	std::cout << "ClapTrap " << this->_name << " takes "
 			<< amount << " of damage. Sheesh" << std::endl;
 	this->_hitPoints -= amount;
+	if (this->_hitPoints < 0)
+		this->_hitPoints = 0;
 }
 
 void			ClapTrap::beRepaired(unsigned int amount) {
 	std::cout << "ClapTrap " << this->_name << " drinks a potion, and restores "
 			<< amount << " HitPoints." << std::endl;
 	this->_hitPoints += amount;
+	if (this->_hitPoints > 100)
+		this->_hitPoints = 100;
 }
 
 /* ************************** Assignment Operator *************************** */

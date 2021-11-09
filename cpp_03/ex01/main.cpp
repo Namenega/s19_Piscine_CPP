@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 18:00:41 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/07 18:06:15 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/09 18:40:06 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@
 int		main(void)
 {
 	ScavTrap	shrek("Shrek");
-	ClapTrap	drake("le Dragon");
+	ScavTrap	drake("the Drake");
 
 	// operator<<(std::cout, shrek);
 	std::cout << std::endl;
-	shrek.attack("le Dragon");
+	shrek.attack("the Drake");
 
 	std::cout << "drake HP : " << drake.getHitPoints() << std::endl;
-	drake.takeDamage(0);
+	drake.takeDamage(200);
 	std::cout << "drake HP : " << drake.getHitPoints() << std::endl << std::endl;
 
 	std::cout << "drake HP : " << drake.getHitPoints() << std::endl;
-	drake.beRepaired(0);
+	drake.beRepaired(200);
 	std::cout << "drake HP : " << drake.getHitPoints() << std::endl << std::endl;
 	return (0);
 }

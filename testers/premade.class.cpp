@@ -1,51 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   premade.class.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 11:39:29 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/11 11:47:54 by namenega         ###   ########.fr       */
+/*   Created: 2021/11/11 10:08:24 by namenega          #+#    #+#             */
+/*   Updated: 2021/11/11 11:46:10 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "Class.hpp"
 
 /* ****************************** Constructor ******************************* */
 
-ScavTrap::ScavTrap() : ClapTrap("", 100, 50, 20) {
-	std::cout << "Default ScavTrap Constructor is called." << std::endl;
-}
-
-ScavTrap::ScavTrap(std::string newName) : ClapTrap(newName, 100, 50, 20) {
-	std::cout << "ScavTrap Constructor(name) is called." << std::endl;
+Class::Class() {
+	std::cout << "Default Class Constructor is called." << std::endl; 
 }
 
 /* **************************** Copy Constructor **************************** */
 
-ScavTrap::ScavTrap(const ScavTrap & cpy) {
-	std::cout << "ScavTrap Constructor copy is called." << std::endl;
+Class::Class(const Class & cpy) {
+	std::cout << "Class Constructor copy is called." << std::endl;
 	*this = cpy;
 }
 
 /* ******************************* Operator= ******************************** */
 
-ScavTrap &			ScavTrap::operator=(ScavTrap const & operEqual) {
+Class &				Class::operator=(Class const & operEqual) {
 	std::cout << "--- Printing operator= ---" << std::endl;
-	if (this != &operEqual)
-		ClapTrap::operator=(operEqual);
+	if (this != operEqual)
+		this = operEqual;
 	return (*this);
 }
 
+/* *************************** Accessor & Mutator *************************** */
 /* ******************************* Functions ******************************** */
+/* ******************************* Operator<< ******************************* */
 
-void				ScavTrap::guardGate() {
-	std::cout << "ScavTrap has entered in Gate keep mode." << std::endl;
+std::ostream &		operator<<(std::ostream & COUT, Class const & operOstream) {
+	COUT << operOstream << std::endl;
+	return (COUT);
 }
 
 /* ******************************* Destructor ******************************* */
 
-ScavTrap::~ScavTrap() {
-	std::cout << "ScavTrap Destructor is called." << std::endl;
+Class::~Class() {
+	std::cout << "Class Destructor is called." << std::endl;
 }

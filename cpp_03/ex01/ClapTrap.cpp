@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 12:53:25 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/09 18:39:38 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/11 10:45:44 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,14 +102,15 @@ ClapTrap &		ClapTrap::operator=(ClapTrap const & rhs) {
 /* ******************************* Operator<< ******************************* */
 
 std::ostream &	operator<<(std::ostream & COUT, ClapTrap const &rhs) {
-	COUT << rhs.getName() << std::endl;
-	COUT << rhs.getHitPoints() << std::endl;
-	COUT << rhs.getEnergyPoints() << std::endl;
-	COUT << rhs.getAttackDamage() << std::endl;
+	COUT << "Name : " << rhs.getName() << std::endl;
+	COUT << "HP : " << rhs.getHitPoints() << std::endl;
+	COUT << "Energy Points : " << rhs.getEnergyPoints() << std::endl;
+	COUT << "Attack Dmg : " << rhs.getAttackDamage() << std::endl;
 	return (COUT);
 }
 
 /* ******************************* Destructor ******************************* */
 
 ClapTrap::~ClapTrap() {
+	std::cout << "ClapTrap Destructor is called." << std::endl;
 }

@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   premade.class.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/06 13:57:22 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/11 10:45:51 by namenega         ###   ########.fr       */
+/*   Created: 2021/11/11 10:26:49 by namenega          #+#    #+#             */
+/*   Updated: 2021/11/11 10:31:27 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef CLASS_HPP
+# define CLASS_HPP
 
 # include <iostream>
-# include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class premadeClass
 {
 	private:
-
+		
 	public:
-		ScavTrap();
-		ScavTrap(ScavTrap const & cpy);
-		ScavTrap(std::string newName);
-		~ScavTrap();
+		premadeClass();
+		premadeClass(const premadeClass & cpy);
+		~premadeClass();
 
-		void		guardGate();
-
-		ScavTrap &		operator=(ScavTrap const &rhs);
+		premadeClass &	operator=(premadeClass const & operEqual);
 };
+
+std::ostream &		operator<<(std::ostream & COUT, premadeClass const & operOstream);
 
 #endif

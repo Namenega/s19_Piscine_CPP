@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 13:58:32 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/09 18:38:20 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/11 10:50:32 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,25 +37,14 @@ ScavTrap &			ScavTrap::operator=(ScavTrap const & rhs) {
 	return (*this);
 }
 
-/* ******************************* Operator<< ******************************* */
+/* ******************************* Functions ******************************** */
 
 void				ScavTrap::guardGate() {
 	std::cout << "ScavTrap has entered Guard mode" << std::endl;
 }
 
-
-/* ******************************* Operator<< ******************************* */
-
-// std::ostream &		operator<<(std::ostream COUT, ScavTrap const & rhs) {
-// 	COUT << rhs.getName() << std::endl;
-// 	COUT << rhs.getHitPoints() << std::endl;
-// 	COUT << rhs.getEnergyPoints() << std::endl;
-// 	COUT << rhs.getAttackDamage() << std::endl;
-// 	return (COUT);
-// }
-
 /* ******************************* Destructor ******************************* */
 
 ScavTrap::~ScavTrap() {
-	std::cout << "Destructor is called (ScavTrap)." << std::endl;
+	std::cout << "ScavTrap Destructor is called." << std::endl;
 }

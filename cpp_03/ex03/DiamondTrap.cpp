@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamongTrap.cpp                                    :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 12:13:12 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/11 13:05:38 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/15 12:51:38 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 /* ****************************** Constructor ******************************* */
 
-DiamondTrap::DiamondTrap() : FragTrap(1), ScavTrap(1) {
+DiamondTrap::DiamondTrap() : ScavTrap(1), FragTrap(1) {
 	std::cout << "Default DiamondTrap Constructor is called." << std::endl;	
 }
 
-DiamondTrap::DiamondTrap(std::string newName) : FragTrap(1), ScavTrap(1) {
+DiamondTrap::DiamondTrap(std::string newName) : ScavTrap(1), FragTrap(1) {
 	std::cout << "DiamondTrap constructor (name) is called." << std::endl;
 	_name = newName;
 	this->setName(_name);
@@ -46,13 +46,6 @@ DiamondTrap &				DiamondTrap::operator=(DiamondTrap const & operEqual) {
 void						DiamondTrap::whoAmI() {
 	std::cout << "My name is : " << this->_name << std::endl;
 	std::cout << "My ClapTrap name is : " << this->getName() << std::endl;
-}
-
-/* ******************************* Operator<< ******************************* */
-
-std::ostream &		operator<<(std::ostream & COUT, DiamondTrap const & operOstream) {
-	COUT << operOstream << std::endl;
-	return (COUT);
 }
 
 /* ******************************* Destructor ******************************* */

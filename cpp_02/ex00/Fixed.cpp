@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:54:16 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/04 20:43:11 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/15 13:29:54 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ Fixed::Fixed() : _fixedValue(0)
 Fixed::Fixed(const Fixed& cpy)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	// this->_fixedValue = cpy._fixedValue;
-	/*----> == */*this = cpy;
+	*this = cpy;
 }
 
 /* ************************** Assignment Operator *************************** */
@@ -35,7 +34,6 @@ Fixed &		Fixed::operator=(Fixed const & rhs)
 	std::cout << "Assignation operator called" << std::endl;
 	if (this != &rhs)
 		this->_fixedValue = rhs.getRawBits();
-		//----> == this->_fixedValue = rhs._fixedValue;
 	return (*this);
 }
 

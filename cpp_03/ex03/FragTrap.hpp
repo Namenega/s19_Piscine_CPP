@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 10:56:34 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/11 12:58:46 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/15 12:34:42 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <iostream>
 # include "ClapTrap.hpp"
+
+//Virtual is used if there are many ways to reach something.
+//It will help the compiler to do it automatically, and not be confused
 
 class FragTrap : virtual public ClapTrap
 {

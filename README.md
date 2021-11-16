@@ -254,5 +254,61 @@ variable of the same type.			|	variable, it cannot be changed to
 
 ## Module 2
 
+### Canonical Class
 
+From now and to the end, we need to make and use canonical class.
+It is simply an way to enforce *consistency* while creating classes.
 
+Class needs :
+- A **constructor**
+- A **copy constructor**
+- A **destructor**
+- A **copy assignement operator**
+
+In practice :
+
+```
+.HPP
+
+class	Knight {
+	private:
+		int _healthPoints;
+	public:
+		Knight();				//Default Constructor
+		Knight(const Knight & copy);	//Copy Constructor
+		~Knight();				//Destructor
+
+		//Copy assignement operator
+		Knight &	operator=(Knight const & operEqual);
+};
+
+-----------
+
+.CPP
+
+#include "Knight.hpp"
+
+//Default Constructor
+Knight::Knight() {
+	std::cout << "Default Knight Constructor is called." << std::endl; 
+}
+
+//Copy Constructor
+Knight::Knight(const Knight & cpy) {
+	std::cout << "Knight Constructor copy is called." << std::endl;
+	*this = cpy;
+}
+
+//Copy assignement operator
+Knight &				Knight::operator=(Knight const & operEqual) {
+	std::cout << "--- Printing operator= ---" << std::endl;
+	if (this != operEqual)
+		this = operEqual;
+	return (*this);
+}
+
+//Destructor
+Knight::~Knight() {
+	std::cout << "Knight Destructor is called." << std::endl;
+}
+```

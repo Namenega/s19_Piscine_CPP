@@ -1,5 +1,7 @@
 # Piscine C++
 
+<img align="left" alt="C++" height="27" width="27" src="https://raw.githubusercontent.com/github/explore/180320cffc25f4ed1bbdfd33d4db3a66eeeeb358/topics/cpp/cpp.png" />
+
 Exercices to learn C++ OOP, divided in 9 modules :
 
 - Module 0 : class, member functions, stdio stream, initilization lists, static and const.

@@ -18,6 +18,33 @@ Exercices to learn C++ OOP, divided in 9 modules :
 
 ## Module 0
 
+### Stdio Stream
+
+```
+#include <iostream>
+
+int main(void) {
+	std::string myName = "namenega";
+	std::string yourName;
+
+	std::cout << "My name is " << namenega << std::endl;
+
+	std::cin >> yourName;
+	std::cout << "Your name is " << yourName << std::endl;
+}
+```
+
+Lets describe everything we saw here :
+
+- ```#include <iostream>``` is preprocessor instruction.
+- ```std::cout``` opens an output stream on the console in which we will send the next part.
+  - *std* means that we use the standard library space.
+  - *cout* means ```console out```
+- ```<<``` redirects the stream in the standard output.
+- ```std::endl``` is a simple ```\n``` but is already formatted for any OS.
+- ```std::cin >>``` works the same as ```cout``` but for in/input
+
+
 ### Create a class
 
 To create an *object*, you need to create a *class*. It's like drawing the plan of the object.
@@ -153,7 +180,7 @@ Overridable		 : Yes			|	No
 Use of Construct/Destruct: Yes			|	No
 ```
 
-Also, the *new* operator allocates memory **then** calls the constructor. Same goes with *delete* that calls the destructor than deallocates the memory.
+Also, the *new* operator allocates memory **then** calls the constructor. Same goes with *delete* that calls the destructor then deallocates the memory.
 
 To use it :
 
@@ -184,3 +211,7 @@ int main(void) {
 	delete [] knightOne;
 }
 ```
+
+
+### Pointers and References
+

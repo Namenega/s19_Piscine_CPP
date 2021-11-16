@@ -33,6 +33,7 @@ class		className {
 
 In a class, we can declare variables and functions that are *members* of the class.
 
+
 ### Access Rights
 
 By default, class members are private, which means we *cannot* use them outside of the class functions. (In structures, it's public by dflt)
@@ -40,6 +41,7 @@ By default, class members are private, which means we *cannot* use them outside 
 In this module we learn two accesses
 - **private** : accessible only inside the class
 - **public** : accessible inside and outside the class
+
 
 ### Constructor and Destructor
 
@@ -62,6 +64,7 @@ class	Knight {
 Here, the *constructor* is ```Knight()``` and the *destructor* is ```~Knight()``` (it doesn't need any parameters).
 The destructor is useless if the program has no dynamic allocation.
 
+
 ### Initialization list
 
 To initialize the ```_healthPoints``` of our knight, we go in the *constructor*.
@@ -80,3 +83,39 @@ Knight::Knight() : _healthPoints(100) {
 }
 ```
 
+
+### Accessors and Mutators
+
+Since we cannot use private members outside of the class, but sometimes needs it anyway, we use *accessor* (aka getter) and *mutator* (aka setter), to *get* and *set*
+values.
+
+- *accessor* is a member function used to retrieve the data of protected members.
+- *mutator* is a member function used to edit/set the data of protected members.
+
+```
+.HPP
+
+class	Knight {
+	private:
+		std::string	_name;
+		int			_healthPoints;
+	public:
+		Knight();
+		~Knight();
+
+		std::string	getName() const;
+		void		setName(std::string newName);
+};
+----
+.CPP
+
+std::string	Knight::getName() const {
+	return (_name);
+}
+
+void		Knight::setName(std::string newName) {
+	_name = newName;
+}
+```
+
+The accessor is a **const**, because its job is to return the value of the private members without modify it.

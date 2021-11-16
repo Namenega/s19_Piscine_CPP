@@ -237,21 +237,17 @@ So the *pointer* is a variable that holds the memory address of another variable
 *Pointer* vs *Reference*
 
 ```
-A pointer can be initialized to any value anytime after it is declared.
-vs
-A reference must be initialized when it is declared.
+A pointer can be initialized to any value	|	A reference must be initialized
+anytime after it is declared.	|	 when it is declared.
 
-A pointer can be assigned to point to a NULL value.
-vs
-References cannot be NULL.
+A pointer can be assigned to point to a	|	References cannot be NULL.
+NULL value.
 
-Pointers need to be dereferenced with a *.
-vs
-References can be used symply by name.
+Pointers need to be dereferenced with a *.	|	References can be used symply by name.
 
-A pointer can be changed to point to any variable of the same type.
-vs
-Once a reference is initialized to a variable, it cannot be changed to refer to a variable object.
+A pointer can be changed to point to any	|	Once a reference is initialized to a
+variable of the same type.					|	variable, it cannot be changed to
+							 a variable object.
 ```
 
 

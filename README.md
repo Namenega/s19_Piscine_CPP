@@ -238,7 +238,7 @@ So the *pointer* is a variable that holds the memory address of another variable
 
 ```
 A pointer can be initialized to any value	|	A reference must be initialized
-anytime after it is declared.	|	 when it is declared.
+anytime after it is declared.			|	 when it is declared.
 
 A pointer can be assigned to point to a	|	References cannot be NULL.
 NULL value.

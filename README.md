@@ -275,7 +275,7 @@ class	Knight {
 		int _healthPoints;
 	public:
 		Knight();				//Default Constructor
-		Knight(const Knight & copy);	//Copy Constructor
+		Knight(const Knight & copy);		//Copy Constructor
 		~Knight();				//Destructor
 
 		//Copy assignement operator
@@ -300,9 +300,9 @@ Knight::Knight(const Knight & cpy) {
 }
 
 //Copy assignement operator
-Knight &				Knight::operator=(Knight const & operEqual) {
+Knight &		Knight::operator=(Knight const & operEqual) {
 	std::cout << "--- Printing operator= ---" << std::endl;
-	if (this != operEqual)
+	if (this != &operEqual)
 		this = operEqual;
 	return (*this);
 }

@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 10:08:24 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/11 11:46:10 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/16 16:11:40 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Class::Class(const Class & cpy) {
 
 Class &				Class::operator=(Class const & operEqual) {
 	std::cout << "--- Printing operator= ---" << std::endl;
-	if (this != operEqual)
+	if (this != &operEqual)
 		this = operEqual;
 	return (*this);
 }

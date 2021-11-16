@@ -143,12 +143,44 @@ Any differences? Yep :
 **new/delete vs malloc/free**
 
 ```
-memory allocated from	 : Free store		/	Heap
-Returns			 : Fully Typed pointer	/	void*
-On Failure		 : Throws error		/	returns NULL
-Required Size		 : Calc. by compiler	/	must be specified in bytes
-Handling arrays		 : Has explicit version	/	manual calc.
-Reallocating		 : Not handled		/	Simple (no cpy constructor)
-Overridable		 : Yes			/	No
-Use of Construct/Destruct: Yes			/	No
+memory allocated from	 : Free store		|	Heap
+Returns			 : Fully Typed pointer	|	void*
+On Failure		 : Throws error		|	returns NULL
+Required Size		 : Calc. by compiler	|	must be specified in bytes
+Handling arrays		 : Has explicit version	|	manual calc.
+Reallocating		 : Not handled		|	Simple (no cpy constructor)
+Overridable		 : Yes			|	No
+Use of Construct/Destruct: Yes			|	No
+```
+
+Also, the *new* operator allocates memory **then** calls the constructor. Same goes with *delete* that calls the destructor than deallocates the memory.
+
+To use it :
+
+```
+//we use here the same class as the 'accessors and mutators' chapter.
+
+#include "Knight.hpp
+
+int main(void) {
+	Knight* knightOne = new Knight();
+	...
+	delete knightOne;
+}
+
+```
+
+To allocate an array with *new* and *delete*, there's a special syntax :
+
+```
+//we use here the same class as the 'accessors and mutators' chapter.
+
+#include "Knight.hpp
+
+int main(void) {
+	int	N = 5;
+	Knight* knightOne = new Knight[N];
+	...
+	delete [] knightOne;
+}
 ```

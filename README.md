@@ -329,7 +329,7 @@ class	Knight {
 		Knight(int amountDamageTaken);
 		Knight(std::string newName, int baseAttack);
 		~Knight();
-}
+};
 ```
 
 Above we have 4 Knight() function, where only arguments change.
@@ -359,11 +359,51 @@ class	Knight {
 		Knight &		operator--();			//--i
 		Knight			operator++(int);		//i++
 		Knight			operator--(int);		//i--
-}
+};
 ```
 
 ---
 
 ## Module 3
 
+### Inheritance
 
+The inheritance of a class is the capability to derive properties from another class.
+It means that a class can inherit members from another one.
+>In example : I have a class Character, and each character has two_legs. My class Knight will inherit the two_legs member of Character class.
+
+From there we can say that there are two type of classes:
+
+- Sub Class / Derived Class : that inherits properties from another class.
+- Super Class / Base Class : whose properties are inherited by subclass.
+
+```
+class	Character {
+	public:
+		void	walk() const;
+		void	talk() const;
+};
+
+class	Knight : public Character {
+	public:
+		void	defend() const;
+};
+
+class	Robber : public Character {
+	public:
+		void	steal() const;
+};
+```
+
+Here above ```Knight``` class and ```Robber``` class inherit properties from ```Character``` class because we admit they can both walk and talk too.
+We use a public inheritance, but the access mode can be different : public, private, protected.
+
+There are multiple kind of inheritance :
+
+- Multiple inheritance : where the subclass inherits from two or more classes.
+- Multilevel inheritance : where the subclass inherits from a class that also inherits from another class.
+- Hierarchical inheritance : where more than one subclass is inherited from single base class.
+- Hybrid (virtual) inheritance : that combined more than one type of inheritance.
+- Diamond Problem : where two superclass have a common base class. (Which way??)
+
+This [topic](https://www.geeksforgeeks.org/inheritance-in-c/) should help.

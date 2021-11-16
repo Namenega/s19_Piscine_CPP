@@ -129,4 +129,26 @@ The accessor is a **const**, because its job is to return the value of the priva
 
 ## Module 1
 
+### Memory allocation
 
+To allocate memory in C++, we currently have to option :
+
+- *malloc()* and *free()*
+- *new* and *delete*
+
+Yet through the modules, malloc and free functions are forbidden. So we need to learn *new* and *delete*.
+
+Any differences? Yep :
+
+**new/delete vs malloc/free**
+
+```
+memory allocated from		: Free store				/	Heap
+Returns						: Fully Typed pointer		/	void*
+On Failure					: Throws error				/	returns NULL
+Required Size				: Calc. by compiler			/	must be specified in bytes
+Handling arrays				: Has explicit version		/	manual calc.
+Reallocating				: Not handled				/	Simple (no cpy constructor)
+Overridable					: Yes						/	No
+Use of Construct/Destruct	: Yes						/	No
+```

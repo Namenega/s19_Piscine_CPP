@@ -4,15 +4,15 @@
 
 Exercices to learn C++ OOP, divided in 9 modules :
 
-- Module 0 : class, member functions, stdio stream, initilization lists, static and const.
-- Module 1 : memory allocation, references, pointers to members, switch.
-- Module 2 : polymorphism ad-hoc, overloads, canonical class.
-- Module 3 : Inheritance.
-- Module 4 : Subtype Polymorphism, abstract class, interfaces.
-- Module 5 : not done yet
-- Module 6 : not done yet
-- Module 7 : not done yet
-- Module 8 : not done yet
+- [x] Module 0 : class, member functions, stdio stream, initilization lists, static and const.
+- [x] Module 1 : memory allocation, references, pointers to members, switch.
+- [x] Module 2 : polymorphism ad-hoc, overloads, canonical class.
+- [ ] Module 3 : Inheritance.
+- [ ] Module 4 : Subtype Polymorphism, abstract class, interfaces.
+- [ ] Module 5 : not done yet
+- [ ] Module 6 : not done yet
+- [ ] Module 7 : not done yet
+- [ ] Module 8 : not done yet
 
 ---
 
@@ -370,7 +370,7 @@ class	Knight {
 
 The inheritance of a class is the capability to derive properties from another class.
 It means that a class can inherit members from another one.
->In example : I have a class Character, and each character has two_legs. My class Knight will inherit the two_legs member of Character class.
+>For example : I have a class Character, and each character has two_legs. My class Knight will inherit the two_legs member of Character class.
 
 From there we can say that there are two type of classes:
 
@@ -398,7 +398,7 @@ class	Robber : public Character {
 Here above ```Knight``` class and ```Robber``` class inherit properties from ```Character``` class because we admit they can both walk and talk too.
 We use a public inheritance, but the access mode can be different : public, private, protected.
 
-There are multiple kind of inheritance :
+There are multiple kinds of inheritance :
 
 - Multiple inheritance : where the subclass inherits from two or more classes.
 - Multilevel inheritance : where the subclass inherits from a class that also inherits from another class.
@@ -407,3 +407,30 @@ There are multiple kind of inheritance :
 - Diamond Problem : where two superclass have a common base class. (Which way??)
 
 This [topic](https://www.geeksforgeeks.org/inheritance-in-c/) should help.
+
+This *Diamond problem* leads us to a new keyword : *virtual*
+
+It will guarantee that only a single instance of the inherited class is passed on.
+
+```
+class	Parent {
+	public:
+		void	isHuman();
+};
+
+class	Father : virtual public Parent {
+	public:
+		void	brownHair();
+};
+
+class	Mother : virtual public Parent {
+	public:
+		void	brownEyes();
+};
+
+class	Child : public Father, public Mother {
+	...
+}
+```
+
+The *Child* class will have a single instance of the *Parent* class, shared by both *Father* and *Mother*.

@@ -1,6 +1,6 @@
-# Piscine C++
+# Piscine <img align="left" alt="C++" height="27" width="27" src="https://raw.githubusercontent.com/github/explore/180320cffc25f4ed1bbdfd33d4db3a66eeeeb358/topics/cpp/cpp.png" />
 
-<img align="left" alt="C++" height="27" width="27" src="https://raw.githubusercontent.com/github/explore/180320cffc25f4ed1bbdfd33d4db3a66eeeeb358/topics/cpp/cpp.png" /><br />
+<br />
 
 Exercices to learn C++ OOP, divided in 9 modules :
 
@@ -250,7 +250,7 @@ variable of the same type.			|	variable, it cannot be changed to
 						|	a variable object.
 ```
 
-
+---
 
 ## Module 2
 
@@ -312,3 +312,58 @@ Knight::~Knight() {
 	std::cout << "Knight Destructor is called." << std::endl;
 }
 ```
+
+
+### Overload
+
+C++ allows to specify more than one definition for a function and operator. It means we can have many functions with the same name, except that they need to have a different number &&|| type of arguments.
+The automatical process of selecting the most appropriate overload function is called *overload resolution*.
+
+```
+class	Knight {
+	private:
+		int _healthPoints;
+	public:
+		Knight();
+		Knight(std::string newName);
+		Knight(int amountDamageTaken);
+		Knight(std::string newName, int baseAttack);
+		~Knight();
+}
+```
+
+Above we have 4 Knight() function, where only arguments change.
+It works the same way with operator.
+
+```
+class	Knight {
+	public:
+		Knight &			operator=(Knight const & rhs);
+
+		/* Comparison */
+		bool			operator>(Knight const & x) const;
+		bool			operator<(Knight const & x) const;
+		bool			operator>=(Knight const & x) const;
+		bool			operator<=(Knight const & x) const;
+		bool			operator==(Knight const & x) const;
+		bool			operator!=(Knight const & x) const;
+
+		/* Arithmetic */
+		Knight			operator+(Knight const & x) const;
+		Knight			operator-(Knight const & x) const;
+		Knight			operator*(Knight const & x) const;
+		Knight			operator/(Knight const & x) const;
+
+		/* Increment */
+		Knight &		operator++();			//++i
+		Knight &		operator--();			//--i
+		Knight			operator++(int);		//i++
+		Knight			operator--(int);		//i--
+}
+```
+
+---
+
+## Module 3
+
+

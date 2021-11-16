@@ -34,7 +34,7 @@ int main(void) {
 }
 ```
 
-Lets describe everything we saw here :
+Let's describe everything we saw here :
 
 - ```#include <iostream>``` is preprocessor instruction.
 - ```std::cout``` opens an output stream on the console in which we will send the next part.
@@ -43,6 +43,7 @@ Lets describe everything we saw here :
 - ```<<``` redirects the stream in the standard output.
 - ```std::endl``` is a simple ```\n``` but is already formatted for any OS.
 - ```std::cin >>``` works the same as ```cout``` but for in/input
+
 
 
 ### Create a class
@@ -214,4 +215,46 @@ int main(void) {
 
 
 ### Pointers and References
+
+```
+std::string		str = "Hello World!";
+std::string*	strPtr = &str;
+std::string&	strRef = str;
+```
+
+Here we got respectively :
+
+- a string
+- a ```pointer``` initialized on the 'str' address
+- a ```reference``` that points on 'str'
+
+We already what a pointer is, so let's explain the *reference* :
+
+The *reference* is type of variable. We have to assign a variable at initialization because it cannot point on nothing. At this moment, we cannot change on what the reference points (it is like a const pointer). The *reference* is an always-dereferenced pointer.
+
+So the *pointer* is a variable that holds the memory address of another variable and a *reference* is an alias for an already existing variable.
+
+*Pointer* vs *Reference*
+
+```
+A pointer can be initialized to any value anytime after it is declared.
+vs
+A reference must be initialized when it is declared.
+
+A pointer can be assigned to point to a NULL value.
+vs
+References cannot be NULL.
+
+Pointers need to be dereferenced with a *.
+vs
+References can be used symply by name.
+
+A pointer can be changed to point to any variable of the same type.
+vs
+Once a reference is initialized to a variable, it cannot be changed to refer to a variable object.
+```
+
+
+
+
 

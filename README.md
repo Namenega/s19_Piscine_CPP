@@ -14,6 +14,8 @@ Exercices to learn C++ OOP, divided in 9 modules :
 - Module 7 : not done yet
 - Module 8 : not done yet
 
+---
+
 ## Module 0
 
 ### Create a class
@@ -78,7 +80,7 @@ Knight::Knight() {
 
 or, to use initialization list :
 
-Knight::Knight() : _healthPoints(100) {
+Knight::Knight() : _healthPoints(100), other variables {
 
 }
 ```
@@ -106,7 +108,9 @@ class	Knight {
 		std::string	getName() const;
 		void		setName(std::string newName);
 };
+
 ----
+
 .CPP
 
 std::string	Knight::getName() const {
@@ -119,3 +123,10 @@ void		Knight::setName(std::string newName) {
 ```
 
 The accessor is a **const**, because its job is to return the value of the private members without modify it.
+
+
+---
+
+## Module 1
+
+

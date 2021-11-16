@@ -146,7 +146,7 @@ Any differences? Yep :
 memory allocated from	 : Free store			/	Heap
 Returns			 : Fully Typed pointer		/	void*
 On Failure		 : Throws error			/	returns NULL
-Required Size	 	: Calc. by compiler		/	must be specified in bytes
+Required Size		 : Calc. by compiler		/	must be specified in bytes
 Handling arrays		 : Has explicit version		/	manual calc.
 Reallocating		 : Not handled			/	Simple (no cpy constructor)
 Overridable		 : Yes				/	No

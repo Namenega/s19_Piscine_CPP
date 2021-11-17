@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 17:01:51 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/17 11:23:57 by namenega         ###   ########.fr       */
+/*   Created: 2021/11/15 15:59:19 by namenega          #+#    #+#             */
+/*   Updated: 2021/11/17 14:20:16 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
+#ifndef CLASS_HPP
+# define CLASS_HPP
 
 # include <iostream>
-# include "WrongAnimal.hpp"
+# include "Animal.hpp"
+# include "Brain.hpp"
 
-class WrongCat : public WrongAnimal
+class Dog : public Animal
 {
 	private:
-		
+		Brain*	_dogBrain;
 	public:
-		WrongCat();
-		WrongCat(const WrongCat & cpy);
-		~WrongCat();
+		Dog();
+		Dog(const Dog & cpy);
+		virtual ~Dog();
 
-		WrongCat &			operator=(WrongCat const & operEqual);
+		Dog &			operator=(Dog const & operEqual);
 
-		void	makeSound() const;
+		virtual void	makeSound() const;
 };
 
-std::ostream &		operator<<(std::ostream & COUT, WrongAnimal const & operOstream);
+std::ostream &		operator<<(std::ostream & COUT, Dog const & operOstream);
 
 #endif

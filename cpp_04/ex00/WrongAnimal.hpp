@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 16:39:12 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/15 18:09:56 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/17 11:23:53 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class WrongAnimal
 		WrongAnimal();
 		WrongAnimal(const WrongAnimal & cpy);
 		WrongAnimal(std::string newType);
-		virtual ~WrongAnimal();
+		~WrongAnimal();
 
 		std::string		getType() const;
 

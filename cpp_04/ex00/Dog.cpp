@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 16:00:28 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/15 16:35:19 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/17 14:14:54 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Dog::Dog() : Animal("Dog") {
 
 /* **************************** Copy Constructor **************************** */
 
-Dog::Dog(const Dog & cpy) {
+Dog::Dog(const Dog & cpy) : Animal(cpy) {
 	std::cout << "Dog Constructor copy is called." << std::endl;
 	*this = cpy;
 }

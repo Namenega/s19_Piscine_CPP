@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 17:01:51 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/17 11:23:57 by namenega         ###   ########.fr       */
+/*   Created: 2021/11/17 11:30:26 by namenega          #+#    #+#             */
+/*   Updated: 2021/11/17 14:19:01 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 # include <iostream>
-# include "WrongAnimal.hpp"
 
-class WrongCat : public WrongAnimal
+class Brain
 {
 	private:
-		
+		std::string	_ideas[100];
 	public:
-		WrongCat();
-		WrongCat(const WrongCat & cpy);
-		~WrongCat();
+		Brain();
+		Brain(const Brain & cpy);
+		~Brain();
 
-		WrongCat &			operator=(WrongCat const & operEqual);
-
-		void	makeSound() const;
+		Brain &	operator=(Brain const & operEqual);
 };
 
-std::ostream &		operator<<(std::ostream & COUT, WrongAnimal const & operOstream);
+std::ostream &		operator<<(std::ostream & COUT, Brain const & operOstream);
 
 #endif

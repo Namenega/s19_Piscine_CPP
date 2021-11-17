@@ -1,35 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 17:01:51 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/17 11:23:57 by namenega         ###   ########.fr       */
+/*   Created: 2021/11/15 15:42:54 by namenega          #+#    #+#             */
+/*   Updated: 2021/11/17 14:49:09 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
 # include <iostream>
-# include "WrongAnimal.hpp"
 
-class WrongCat : public WrongAnimal
+//fonction membre virtual = "method"
+
+class Animal
 {
 	private:
 		
+	protected:
+		std::string		_type;
 	public:
-		WrongCat();
-		WrongCat(const WrongCat & cpy);
-		~WrongCat();
+		Animal();
+		Animal(const Animal & cpy);
+		Animal(std::string newType);
+		virtual ~Animal();
 
-		WrongCat &			operator=(WrongCat const & operEqual);
+		std::string		getType() const;
 
-		void	makeSound() const;
+		virtual void	makeSound() const;
+
+		Animal &		operator=(Animal const & operEqual);
 };
 
-std::ostream &		operator<<(std::ostream & COUT, WrongAnimal const & operOstream);
+std::ostream &		operator<<(std::ostream & COUT, Animal const & operOstream);
 
 #endif

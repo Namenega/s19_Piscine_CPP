@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:40:57 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/17 16:59:20 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/18 17:37:09 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define AMATERIA_HPP
 
 # include <iostream>
+
+class	AMateria;
+
 # include "ICharacter.hpp"
 
 class AMateria
@@ -24,7 +27,7 @@ class AMateria
 		AMateria();
 		AMateria(std::string const & type);
 		AMateria(const AMateria & cpy);
-		~AMateria();
+		virtual ~AMateria();
 
 		//operator
 		AMateria &			operator=(AMateria const & operEqual);

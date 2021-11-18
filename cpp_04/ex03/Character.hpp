@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 17:05:07 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/17 17:46:41 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/18 17:28:50 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 
-#include "AMateria.hpp"
+// #include "AMateria.hpp"
 #include "ICharacter.hpp"
 
 class Character : public ICharacter {
@@ -24,19 +24,19 @@ class Character : public ICharacter {
 	public:
 		Character();
 		Character(std::string newName);
-		Character(Character const & cpy);
-		~Character();
+		Character(const Character & cpy);
+		virtual ~Character();
 
 		//operator
 		Character &			operator=(Character const & operEqual);
 
 		//accessors
-		std::string const &	getName() const;
+		virtual std::string const &	getName() const;
 
 		//function
-		void				equip(AMateria* m);
-		void				unequip(int idx);
-		void				use(int idx, ICharacter& target);
+		virtual void				equip(AMateria* m);
+		virtual void				unequip(int idx);
+		virtual void				use(int idx, ICharacter& target);
 };
 
 #endif

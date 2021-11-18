@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 17:16:22 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/18 14:02:02 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/18 17:44:22 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 /* ****************************** Constructor ******************************* */
 
 Character::Character() : _name("default"), _count(0) {
-	std::cout << "Default Character Constructor called." << std::endl;
+	std::cout << "> Default Character Constructor called." << std::endl;
 	for (int i = 0; i < 4; i++) {
 		_inventory[i] = 0;
 	}
 }
 
 Character::Character(std::string newName) : _name(newName), _count(0) {
-	std::cout << "Named Character Constructor called." << std::endl;
+	std::cout << ">> Named Character Constructor called." << std::endl;
 	for (int i = 0; i < 4; i++) {
 		_inventory[i] = 0;
 	}
@@ -31,14 +31,14 @@ Character::Character(std::string newName) : _name(newName), _count(0) {
 /* **************************** Copy Constructor **************************** */
 
 Character::Character(Character const & cpy) {
-	std::cout << "Character Copy Constructor called." << std::endl;
+	std::cout << ">>> Character Copy Constructor called." << std::endl;
 	*this = cpy;
 }
 
 /* ******************************* Operator= ******************************** */
 
 Character &				Character::operator=(Character const & operEqual) {
-	std::cout << "--- Printing operator= ---" << std::endl;
+	std::cout << ">>>> operator=" << std::endl;
 	if (this != &operEqual) {
 		_name = operEqual._name;
 		_count = operEqual._count;
@@ -67,7 +67,7 @@ void			Character::equip(AMateria* m) {
 	if (_count >= 0 && _count < 4) {
 		for (int i = 0; i < 4; i++) {
 			if (this->_inventory[i] == 0) {
-				th-s>_inventory[_count] = m;
+				this->_inventory[_count] = m;
 				_count++;
 				return ;
 			}
@@ -77,7 +77,7 @@ void			Character::equip(AMateria* m) {
 
 void			Character::unequip(int idx) {
 	if (this->_inventory[idx]) {
-		this->inventory[idx] = 0;
+		this->_inventory[idx] = 0;
 		_count--;
 	}
 }
@@ -91,9 +91,8 @@ void			Character::use(int idx, ICharacter& target) {
 /* ******************************* Destructor ******************************* */
 
 Character::~Character() {
-	std::cout << "Character Destructor called." << std::endl;
-	// for (int i = 0; i < _count; i++) {
-	// 	delete _inventory[i];
-	// }
-	delete [] _inventory;
+	std::cout << ">>>>> Character Destructor called." << std::endl;
+	for (int i = 0; i < _count; i++) {
+		delete _inventory[i];
+	}
 }

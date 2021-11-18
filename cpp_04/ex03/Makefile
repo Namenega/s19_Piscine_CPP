@@ -1,8 +1,9 @@
-SRCNAME 	=	main.cpp		\
-				Animal.cpp		\
-				Cat.cpp			\
-				Dog.cpp			\
-				Brain.cpp
+SRCNAME 	=	main.cpp			\
+				AMateria.cpp		\
+				Character.cpp		\
+				Cure.cpp			\
+				Ice.cpp				\
+				MateriaSource.cpp	\
 
 SRCS 		= ${SRCNAME}
 

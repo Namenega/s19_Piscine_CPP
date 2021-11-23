@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   premade.class.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 10:08:24 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/16 16:11:40 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/23 13:43:19 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Class.hpp"
+// #include "Class.hpp"
 
 /* ****************************** Constructor ******************************* */
 
 Class::Class() {
-	std::cout << "Default Class Constructor is called." << std::endl; 
+	std::cout << "\033[1;34mDefault Class Constructor called.\033[0m" << std::endl; 
 }
 
 /* **************************** Copy Constructor **************************** */
@@ -46,5 +46,5 @@ std::ostream &		operator<<(std::ostream & COUT, Class const & operOstream) {
 /* ******************************* Destructor ******************************* */
 
 Class::~Class() {
-	std::cout << "Class Destructor is called." << std::endl;
+	std::cout << "\033[1;31mClass Destructor called.\033[0m" << std::endl;
 }

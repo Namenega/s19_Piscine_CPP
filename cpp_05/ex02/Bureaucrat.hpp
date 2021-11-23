@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:06:11 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/23 11:54:28 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:02:00 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ class Bureaucrat
 		void				lowerGrade();
 		void				biggerGrade();
 		void				signForm(Form &f) const;
+		void				executeForm(Form const & form);
 };
 
 std::ostream &			operator<<(std::ostream& COUT, Bureaucrat const & operStream);

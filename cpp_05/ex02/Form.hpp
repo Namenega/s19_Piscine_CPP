@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:41:23 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/23 14:01:24 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:00:21 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 # define FORM_HPP
 
 # include <iostream>
+
 class Form;
+
 # include "Bureaucrat.hpp"
 
 class Form
@@ -45,6 +47,12 @@ class Form
 		};
 
 		class AlreadySignedException : public std::exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};
+
+		class NotSignedException : public std::exception
 		{
 			public:
 				virtual const char* what() const throw();

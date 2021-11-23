@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:51:54 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/23 13:44:01 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:12:40 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /* ****************************** Constructor ******************************* */
 
-Form::Form() : _name("default"), _signed(false), _neededGradeToSign(150), _neededGradeToExec(150) {
+Form::Form() : _name("default"), _signed(false), _neededGradeToSign(10), _neededGradeToExec(10) {
 	std::cout << "\033[1;34mDefault Form Constructor called.\033[0m" << std::endl;
 }
 
@@ -71,6 +71,10 @@ const char*		Form::GradeTooLowException::what() const throw() {
 
 const char*		Form::AlreadySignedException::what() const throw() {
 	return ("This Form is already signed.");
+}
+
+const char*		Form::NotSignedException::what() const throw() {
+	return ("this Form is not signed yet.");
 }
 
 void			Form::beSigned(Bureaucrat const &signer) {

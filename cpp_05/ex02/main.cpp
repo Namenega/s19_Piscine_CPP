@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 15:08:19 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/23 14:06:29 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:12:27 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,39 +16,41 @@
 
 int		main(void)
 {
-	std::cout << "---- \033[1;35mTry form > bureaucrat\033[0m ----" << std::endl;
+	std::cout << "---- \033[1;35mTry Bureaucrat can Shrubbery\033[0m ----" << std::endl;
 	try
 	{
-		Bureaucrat	jimmy("Jimmy", 150);
-		operator<<(std::cout, jimmy);
-		ShrubberyCreationForm		f1;
+		Bureaucrat alPacino("Al Pacino", 1);
+		operator<<(std::cout, alPacino);
+		ShrubberyCreationForm f1("cocaïna_tree");
 		operator<<(std::cout, f1);
-		jimmy.signForm(f1);
+		alPacino.signForm(f1);
+		alPacino.executeForm(f1);
 	}
-	catch(const std::exception& e)
+	catch (const std::exception & e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << e.what() << std::endl;
 	}
 	std::cout << std::endl;
 	std::cout << std::endl;
 
 	//---------------------------------//
 	//---------------------------------//
-	// std::cout << "---- \033[1;35mTry bureaucrat > form\033[0m ----" << std::endl;
-	// try
-	// {
-	// 	Bureaucrat	alPacino("Al Pacino", 1);
-	// 	operator<<(std::cout, alPacino);
-	// 	Form		f2("Form 66c", 14, 100);
-	// 	operator<<(std::cout, f2);
-	// 	alPacino.signForm(f2);
-	// }
-	// catch(const std::exception& e)
-	// {
-	// 	std::cerr << e.what() << '\n';
-	// }
-	// std::cout << std::endl;
-	// std::cout << std::endl;
+	std::cout << "---- \033[1;35mTry Bureaucrat cannot Shrubbery\033[0m ----" << std::endl;
+	try
+	{
+		Bureaucrat	grosToni("Gros Toni", 146);
+		operator<<(std::cout, grosToni);
+		ShrubberyCreationForm	f2("Pasta_tree");
+		operator<<(std::cout, f2);
+		grosToni.signForm(f2);
+		grosToni.executeForm(f2);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	std::cout << std::endl;
+	std::cout << std::endl;
 	
 	//---------------------------------//
 	//---------------------------------//

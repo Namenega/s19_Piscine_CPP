@@ -6,14 +6,15 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 13:55:34 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/23 14:22:28 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:15:39 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SHRUBBERYCREATIONFORM_HPP
 # define SHRUBBERYCREATIONFORM_HPP
 
-#include "Form.hpp"
+# include "Form.hpp"
+# include <fstream>
 
 class ShrubberyCreationForm : public Form
 {
@@ -27,6 +28,12 @@ class ShrubberyCreationForm : public Form
 		virtual ~ShrubberyCreationForm();
 
 		ShrubberyCreationForm &	operator=(const ShrubberyCreationForm & operEqual);
+
+		class ErrorFileException : public std::exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};
 
 		std::string	getName() const;
 		std::string	getTarget() const;

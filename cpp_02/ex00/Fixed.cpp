@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:54:16 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/15 13:29:54 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/23 14:55:24 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 
 Fixed::Fixed() : _fixedValue(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "\033[1;34mDefault Fixed Constructor called\033[0m" << std::endl;
 }
 
 /* **************************** Copy Constructor **************************** */
 
 Fixed::Fixed(const Fixed& cpy)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "\033[1;34mCopy Fixed Constructor called\033[0m" << std::endl;
 	*this = cpy;
 }
 
@@ -31,7 +31,7 @@ Fixed::Fixed(const Fixed& cpy)
 
 Fixed &		Fixed::operator=(Fixed const & rhs) 
 {
-	std::cout << "Assignation operator called" << std::endl;
+	std::cout << "\033[1;35mAssignation operator called\033[0m" << std::endl;
 	if (this != &rhs)
 		this->_fixedValue = rhs.getRawBits();
 	return (*this);
@@ -54,7 +54,7 @@ void		Fixed::setRawBits(int const raw)
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "\033[1;31mFixed Destructor called\033[0m" << std::endl;
 }
 
 /*

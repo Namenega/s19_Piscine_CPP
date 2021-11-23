@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 20:41:08 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/04 22:38:10 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/23 15:05:35 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 
 Fixed::Fixed() : _fixedValue(0)
 {
-	std::cout << "Default constructor called" <<std::endl;
+	std::cout << "\033[1;34mDefault Fixed Constructor called.\033[0m" <<std::endl;
 }
 
 /* **************************** Copy Constructor **************************** */
 
 Fixed::Fixed(const Fixed& cpy)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "\033[1;34mCopy constructor called.\033[0m" << std::endl;
 	*this = cpy;
 }
 
@@ -31,7 +31,7 @@ Fixed::Fixed(const Fixed& cpy)
 
 Fixed::Fixed(const int conv)
 {
-	std::cout << "Int constructor called" << std::endl;
+	std::cout << "\033[1;34mInt constructor called.\033[0m" << std::endl;
 	_fixedValue = conv << _nbrBits;
 }
 
@@ -39,7 +39,7 @@ Fixed::Fixed(const int conv)
 
 Fixed::Fixed(const float conv)
 {
-	std::cout << "Float constructor called" << std::endl;
+	std::cout << "\033[1;34mFloat constructor called.\033[0m" << std::endl;
 	_fixedValue = roundf(conv * (1 << _nbrBits));
 }
 
@@ -90,5 +90,5 @@ float		Fixed::toFloat(void) const
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "\033[1;31mDestructor Fixed called.\033[0m" << std::endl;
 }

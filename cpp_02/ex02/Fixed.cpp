@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 21:58:20 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/04 23:49:22 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/23 15:01:47 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,21 @@
 /* ****************************** Constructors ****************************** */
 
 Fixed::Fixed() : _fixedValue(0) {
-
+	std::cout << "\033[1;34mDefault Fixed Constructor called.\033[0m" <<std::endl;
 }
 
 Fixed::Fixed(const Fixed &cpy) {
+	std::cout << "\033[1;34mCopy constructor called.\033[0m" << std::endl;
 	*this = cpy;
 }
 
 Fixed::Fixed(const int conv) {
+	std::cout << "\033[1;34mInt constructor called.\033[0m" << std::endl;
 	this->_fixedValue = conv << _nbrBits;
 }
 
 Fixed::Fixed(const float conv) {
+	std::cout << "\033[1;34mFloat constructor called.\033[0m" << std::endl;
 	this->_fixedValue = roundf(conv * (1 << _nbrBits));
 }
 
@@ -147,6 +150,7 @@ const Fixed &	Fixed::min(Fixed const & nbr1, Fixed const & nbr2) {
 /* ******************************* Destructor ******************************* */
 
 Fixed::~Fixed() {
+	std::cout << "\033[1;31mDestructor Fixed called.\033[0m" << std::endl;
 }
 
 /* ******************************* Operator<< ******************************* */

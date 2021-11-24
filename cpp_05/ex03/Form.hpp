@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:41:23 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/24 16:14:48 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/24 16:13:49 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 # define FORM_HPP
 
 # include <iostream>
+
 class Form;
+
 # include "Bureaucrat.hpp"
 
 class Form
@@ -50,12 +52,20 @@ class Form
 				virtual const char* what() const throw();
 		};
 
+		class NotSignedException : public std::exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};
+
 		std::string		getName() const;
 		bool			getSigned() const;
 		int				getGradeToSign() const;
 		int				getGradeToExec() const;
 
 		void			beSigned(Bureaucrat const &signer);
+
+		virtual void	execute(Bureaucrat const & executor) const;
 };
 
 std::ostream &			operator<<(std::ostream & COUT, Form const & operStream);

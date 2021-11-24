@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:06:11 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/24 16:14:54 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/24 15:15:58 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
-# include <exception>
+
+class Bureaucrat;
+
+# include "Form.hpp"
 
 class Bureaucrat
 {
@@ -25,7 +28,7 @@ class Bureaucrat
 		Bureaucrat();
 		Bureaucrat(std::string const newName, int newGrade);
 		Bureaucrat(const Bureaucrat & cpy);
-		virtual ~Bureaucrat();
+		~Bureaucrat();
 
 		Bureaucrat &		operator=(Bureaucrat const & operEqual);
 
@@ -46,6 +49,8 @@ class Bureaucrat
 
 		void				lowerGrade();
 		void				biggerGrade();
+		void				signForm(Form &f) const;
+		void				executeForm(Form const & form);
 };
 
 std::ostream &			operator<<(std::ostream& COUT, Bureaucrat const & operStream);

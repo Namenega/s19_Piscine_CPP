@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:41:23 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/24 14:36:21 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/24 16:14:41 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Form
 		Form();
 		Form(std::string const newName, int const gradeToSign, int const gradeToExec);
 		Form(const Form & cpy);
-		~Form();
+		virtual ~Form();
 
 		Form &			operator=(const Form & operEqual);
 

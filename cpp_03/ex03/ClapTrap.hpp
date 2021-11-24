@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 10:55:19 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/15 12:48:53 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/24 12:23:59 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class ClapTrap
 		ClapTrap(const ClapTrap & cpy);
 		ClapTrap(std::string newName);
 		ClapTrap(std::string newName, int hp, int energyPoints, int attackDamage);
-		~ClapTrap();
+		virtual ~ClapTrap();
 
 		ClapTrap &	operator=(ClapTrap const & operEqual);
 

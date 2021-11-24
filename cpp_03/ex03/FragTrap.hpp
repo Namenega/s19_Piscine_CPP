@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 10:56:34 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/15 12:34:42 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/24 12:27:57 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,13 @@
 
 class FragTrap : virtual public ClapTrap
 {
-	private:
-		
+	protected:
+		FragTrap(int type);
 	public:
 		FragTrap();
 		FragTrap(const FragTrap & cpy);
 		FragTrap(std::string newName);
-		FragTrap(int type);
-		~FragTrap();
+		virtual ~FragTrap();
 
 		FragTrap &	operator=(FragTrap const & operEqual);
 

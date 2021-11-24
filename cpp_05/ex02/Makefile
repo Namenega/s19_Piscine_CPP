@@ -1,7 +1,9 @@
-SRCNAME 	=	main.cpp			\
-				Bureaucrat.cpp		\
-				Form.cpp			\
-				ShrubberyCreationForm.cpp
+SRCNAME 	=	main.cpp					\
+				Bureaucrat.cpp				\
+				Form.cpp					\
+				ShrubberyCreationForm.cpp	\
+				RobotomyRequestForm.cpp		\
+				PresidentialPardonForm.cpp
 
 SRCS 		= ${SRCNAME}
 

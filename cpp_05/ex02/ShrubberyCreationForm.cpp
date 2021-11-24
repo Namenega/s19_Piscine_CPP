@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:02:03 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/23 18:23:07 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/24 14:38:19 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,7 @@ const char*		ShrubberyCreationForm::ErrorFileException::what() const throw() {
 }
 
 void			ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
-	// Form::execute(executor);
-	(void)executor;
+	Form::execute(executor);
 	std::ofstream	ofs(this->getTarget().append("_shrubbery").c_str());
 	if (!ofs)
 		throw ErrorFileException();

@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:13:21 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/23 16:09:54 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/24 14:39:38 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void			Bureaucrat::signForm(Form &f) const {
 void			Bureaucrat::executeForm(Form const & form) {
 	try {
 		form.execute(*this);
-		std::cout << this->_name << " executs " << form.getName() << std::endl;
+		std::cout << this->_name << " executes " << form.getName() << std::endl;
 	}
 	catch(const Form::GradeTooLowException& e) {
 		std::cout << *this << " cannot be executed because " << e.what() << std::endl;;

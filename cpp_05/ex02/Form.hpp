@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:41:23 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/23 17:00:21 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/24 14:36:21 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ class Form
 
 		void			beSigned(Bureaucrat const &signer);
 
-		virtual void	execute(Bureaucrat const & executor) const = 0;
+		virtual void	execute(Bureaucrat const & executor) const;
 };
 
 std::ostream &			operator<<(std::ostream & COUT, Form const & operStream);

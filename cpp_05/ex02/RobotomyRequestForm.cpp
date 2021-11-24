@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:12:49 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/23 18:30:45 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/24 15:23:08 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,26 +36,35 @@ RobotomyRequestForm &	RobotomyRequestForm::operator=(const RobotomyRequestForm &
 	std::cout << "\033[1;35m--- Printing operator= ---\033[0m" << std::endl;
 	if (this != &operEqual) {
 		Form::operator=(operEqual);
+		_name = operEqual._name;
+		_target = operEqual._target;
 	}
 	return (*this);
 }
 
 /* *************************** Accessor & Mutator *************************** */
+
+std::string			RobotomyRequestForm::getName() const {
+	return (this->_name);
+}
+
+std::string			RobotomyRequestForm::getTarget() const {
+	return (this->_target);
+}
+
 /* ******************************* Functions ******************************** */
 
+const char*				RobotomyRequestForm::RobotomyFailException::what() const throw() {
+	return ("Robotomization failed !");
+}
+
 void					RobotomyRequestForm::execute(Bureaucrat const & executor) const {
-	int randomNumber = rand() % 100;
-	std::cout << "\033[1;32mBRRRRZZZZZZZZZZZZZZZZZZZZZZ\033[0m" << std::endl;
-	try
-	{
-		if (randomNumber >= 50)
-			std::cout << this->_target << "has been fully robotomized!" << std::endl;
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	
+	Form::execute(executor);
+	std::cout << "\033[1;33m* BRRRZZZZZZZZZZZZZZZZZZZZZ *\033[0m" << std::endl;
+	if (std::rand() % 2 == 0)
+		std::cout << this->_target << " has been robotomized!" << std::endl;
+	else
+		std::cout << "I think we have a problem ..." << std::endl;
 }
 
 /* ******************************* Destructor ******************************* */

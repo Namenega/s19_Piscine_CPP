@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:51:54 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/23 13:44:01 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/24 14:04:49 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ std::string		Form::getName() const {
 	return (this->_name);
 }
 
-bool					Form::getSigned() const {
+bool			Form::getSigned() const {
 	return (this->_signed);
 }
 

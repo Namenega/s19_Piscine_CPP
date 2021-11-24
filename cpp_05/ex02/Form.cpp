@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:51:54 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/23 17:12:40 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/24 14:39:25 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,15 @@ const char*		Form::AlreadySignedException::what() const throw() {
 }
 
 const char*		Form::NotSignedException::what() const throw() {
-	return ("this Form is not signed yet.");
+	return ("This Form is not signed yet.");
+}
+
+void Form::execute(Bureaucrat const &executor) const
+{
+	if (!this->getSigned())
+		throw(NotSignedException());
+	if (executor.getGrade() > this->getGradeToExec())
+		throw(GradeTooHighException());
 }
 
 void			Form::beSigned(Bureaucrat const &signer) {

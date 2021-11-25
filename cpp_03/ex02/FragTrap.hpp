@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 10:56:34 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/11 11:58:20 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/25 14:48:09 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class FragTrap : public ClapTrap
 		FragTrap &	operator=(FragTrap const & operEqual);
 
 		void		highFivesGuys(void);
+		void		attack(std::string const & target);
 };
 
 #endif

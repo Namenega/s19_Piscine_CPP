@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 12:51:50 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/06 14:11:16 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/25 14:36:34 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string		_name;
 		int				_hitPoints;
 		int				_energyPoints;

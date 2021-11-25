@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 10:54:20 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/24 12:10:20 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/25 14:52:28 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		main(void)
 	std::cout << std::endl;
 	std::cout << "drake HP : \033[1;36m" << drake.getHitPoints() << "\033[0m" << std::endl;
 	shrek.attack("the Drake");
-    drake.takeDamage(shrek.getAttackDamage());
+	drake.takeDamage(shrek.getAttackDamage());
 	std::cout << "drake HP : \033[1;36m" << drake.getHitPoints() << "\033[0m" << std::endl << std::endl;
 	drake.takeDamage(79);
 	std::cout << "drake HP : \033[1;36m" << drake.getHitPoints() << "\033[0m" << std::endl << std::endl;

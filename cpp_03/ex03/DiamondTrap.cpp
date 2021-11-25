@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 12:13:12 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/24 12:21:40 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/25 14:49:40 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,12 @@ DiamondTrap &				DiamondTrap::operator=(DiamondTrap const & operEqual) {
 void						DiamondTrap::whoAmI() {
 	std::cout << "My name is : \033[1;35m" << this->_name << "\033[0m" << std::endl;
 	std::cout << "My ClapTrap name is : \033[1;35m" << this->getName() << "\033[0m" << std::endl;
+}
+
+void			DiamondTrap::attack(std::string const & target) {
+	std::cout << "DiamondTrap " << this->_name
+			<< " attack " << target << ", causing \033[1;36m"
+			<< this->_attackDamage << "\033[0m points of damage." << std::endl;
 }
 
 /* ******************************* Destructor ******************************* */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 13:57:22 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/11 10:45:51 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/25 14:35:41 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class ScavTrap : public ClapTrap
 		ScavTrap(std::string newName);
 		~ScavTrap();
 
+		void		attack(std::string const & target);
 		void		guardGate();
 
 		ScavTrap &		operator=(ScavTrap const &rhs);

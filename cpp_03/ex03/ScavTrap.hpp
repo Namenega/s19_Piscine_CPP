@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 10:57:11 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/24 12:27:47 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/25 14:48:37 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class ScavTrap : virtual public ClapTrap
 		ScavTrap &	operator=(ScavTrap const & operEqual);
 
 		void		guardGate();
+		void		attack(std::string const & target);
 };
 
 #endif

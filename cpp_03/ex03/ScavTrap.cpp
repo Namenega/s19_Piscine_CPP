@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 11:39:29 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/24 12:29:04 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/25 14:50:01 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,12 @@ ScavTrap &			ScavTrap::operator=(ScavTrap const & operEqual) {
 
 void				ScavTrap::guardGate() {
 	std::cout << "ScavTrap has entered in \033[1;35mGuard mode\033[0m." << std::endl;
+}
+
+void			ScavTrap::attack(std::string const & target) {
+	std::cout << "ScavTrap " << this->_name
+			<< " attack " << target << ", causing \033[1;36m"
+			<< this->_attackDamage << "\033[0m points of damage." << std::endl;
 }
 
 /* ******************************* Destructor ******************************* */

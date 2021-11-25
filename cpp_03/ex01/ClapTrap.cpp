@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 12:53:25 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/24 11:45:35 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/25 14:38:59 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,8 @@ void			ClapTrap::attack(std::string const & target) {
 }
 
 void			ClapTrap::takeDamage(unsigned int amount) {
-	std::cout << "ClapTrap " << this->_name << " takes "
-			<< " takes \033[1;36m" << amount << "\033[0m of damage. Sheesh" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " takes \033[1;36m"
+			<< amount << "\033[0m of damage. Sheesh" << std::endl;
 	this->_hitPoints -= amount;
 	if (this->_hitPoints < 0)
 		this->_hitPoints = 0;

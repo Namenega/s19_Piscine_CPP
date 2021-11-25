@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 12:13:48 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/15 12:49:59 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/25 14:49:08 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ class DiamondTrap : public ScavTrap, public FragTrap
 
 		DiamondTrap &	operator=(DiamondTrap const & operEqual);
 
-		void			whoAmI();
+		void		whoAmI();
+		void		attack(std::string const & target);
 };
 
 #endif

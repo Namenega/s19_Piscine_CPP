@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 10:56:34 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/24 12:27:57 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/25 14:48:53 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class FragTrap : virtual public ClapTrap
 		FragTrap &	operator=(FragTrap const & operEqual);
 
 		void		highFivesGuys(void);
+		void		attack(std::string const & target);
 };
 
 #endif

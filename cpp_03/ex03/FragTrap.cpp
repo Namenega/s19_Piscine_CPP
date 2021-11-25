@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 11:50:21 by namenega          #+#    #+#             */
-/*   Updated: 2021/11/24 12:28:40 by namenega         ###   ########.fr       */
+/*   Updated: 2021/11/25 14:49:54 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,12 @@ FragTrap &				FragTrap::operator=(FragTrap const & operEqual) {
 void					FragTrap::highFivesGuys(void) {
 	std::cout << "GG FragTrap has been slayed." << std::endl;
 	std::cout << "Let's \033[1;35mHigh Five\033[0m." << std::endl;
+}
+
+void			FragTrap::attack(std::string const & target) {
+	std::cout << "FragTrap " << this->_name
+			<< " attack " << target << ", causing \033[1;36m"
+			<< this->_attackDamage << "\033[0m points of damage." << std::endl;
 }
 
 /* ******************************* Destructor ******************************* */

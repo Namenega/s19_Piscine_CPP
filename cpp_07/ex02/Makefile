@@ -6,7 +6,7 @@ OBJS 		= ${SRCS:.cpp=.o}
 
 NAME		= Template
 
-CXX 		= clang++
+CXX 		= clang++ -g -fsanitize=address
 RM 			= rm -f
 CXXFLAGS 	= -Wall -Wextra -Werror -std=c++98
 

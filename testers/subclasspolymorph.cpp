@@ -6,7 +6,7 @@
 /*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:28:06 by namenega          #+#    #+#             */
-/*   Updated: 2021/12/08 15:42:23 by namenega         ###   ########.fr       */
+/*   Updated: 2021/12/08 15:51:58 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ class Pokemon
 	public:
 		Pokemon(){};
 		virtual ~Pokemon(){};
-		virtual void	attack() {
-			std::cout << "Pokemon attacks." << std::endl;
-		}
+		virtual void	attack() = 0;
 };
 
 class Charmander : public Pokemon
@@ -27,7 +25,7 @@ class Charmander : public Pokemon
 	public:
 		Charmander(){};
 		~Charmander(){};
-		virtual void	attack() {
+		void	attack() {
 			std::cout << "Charmander attacks." << std::endl;
 		}
 };

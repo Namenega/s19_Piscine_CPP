@@ -481,7 +481,7 @@ In this situation, the output will be :
 >Pokemon attacks.
 
 But since we have *new Charmander()*, we wanted Charmander to attack. To fix this,
-we will use the same key word as the previous Module : **virtual** so Charmander can attack.
+we will use the same key word as seen in the previous Module : **virtual** so Charmander can attack.
 
 ```
 class Pokemon {
@@ -511,4 +511,37 @@ int main() {
 }
 ```
 
-The output will now return an error. Indeed we also need to make our destructor *virtual*.
+The output will now return an error. Indeed, we also need to make our destructor *virtual*! We just made a *virtual function*.
+
+What now, if we do not need our Pokemon to attack but Charmander yes? Every Pokemon can attack but 'Pokemon' itself do not need to.
+
+```
+class Pokemon {
+	public:
+		Pokemon(){};
+		virtual ~Pokemon(){};
+		virtual void	attack() = 0;
+}
+
+class Charmander : public Pokemon {
+	public:
+		Charmander(){};
+		~Charmander(){};
+		void	attack() {
+			std::cout << "Charmander attacks." << std::endl;
+		};
+}
+
+int main() {
+	Pokemon *		a = new Charmander();
+
+	a->attack();
+	delete a;
+	return (0);
+}
+```
+
+Here we set the *attack()* function to equal 0. From this moment, the virtual function *attack()* becomes a pure virtual function. And the class is now an *Abstract class*.
+
+A class is made *abstract* by declaring at least one its functions as *pure virtual* (specified by placing the "= 0"). The purpose of an *abstract class* is to provide an appropriate base class from which other classes inherit.
+Now, an *Interface* is an abstract class made with **only** pure virtual functions. It is used to provide/force Obj. Oriented System a common and standardized appopriate interface.

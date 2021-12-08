@@ -479,6 +479,7 @@ int main() {
 
 In this situation, the output will be :
 >Pokemon attacks.
+
 But since we have *new Charmander()*, we wanted Charmander to attack. To fix this,
 we will use the same key word as the previous Module : **virtual** so Charmander can attack.
 

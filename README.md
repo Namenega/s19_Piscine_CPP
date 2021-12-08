@@ -9,7 +9,7 @@ Exercices to learn C++ OOP, divided in 9 modules :
 - [x] Module 2 : polymorphism ad-hoc, overloads, canonical class.
 - [x] Module 3 : Inheritance.
 - [x] Module 4 : Subtype Polymorphism, abstract class, interfaces.
-- [ ] Module 5 : not done yet
+- [ ] Module 5 : Exceptions
 - [ ] Module 6 : not done yet
 - [ ] Module 7 : not done yet
 - [ ] Module 8 : not done yet
@@ -545,3 +545,34 @@ Here we set the *attack()* function to equal 0. From this moment, the virtual fu
 
 A class is made *abstract* by declaring at least one its functions as *pure virtual* (specified by placing the "= 0"). The purpose of an *abstract class* is to provide an appropriate base class from which other classes inherit.
 Now, an *Interface* is an abstract class made with **only** pure virtual functions. It is used to provide/force Obj. Oriented System a common and standardized appopriate interface.
+
+---
+
+## Module 5
+
+### Exceptions
+
+Different errors can occur when executing a program : made by programmer, wring input, ... Here we will learn to throw an exception when it happens.
+
+There are 3 new key words :
+- *try*, allows to define a block of code to be tested for errors while being executed.
+- *throw*, throws an exception when a problem is detected, which let us create a custom error.
+- *catch*, allows to define a block of code to be executed, if an error occurs in the *try* block.
+
+```
+try {
+	int age = 15;
+	if (age >= 18) {
+		std::cout << "Access granted - you are old enough.";
+	} else {
+		throw (age);
+	}
+}
+catch (int myNum) {
+	cout << "Access denied - You must be at least 18 years old.\n";
+	cout << "Age is: " << myNum;
+}
+```
+
+
+

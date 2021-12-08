@@ -435,6 +435,8 @@ class	Child : public Father, public Mother {
 
 The *Child* class will have a single instance of the *Parent* class, shared by both *Father* and *Mother*. Also, we cannot access *private* members in a sub-sub-class from a base class. Here comes the access mode ```protected``` which allows the use of protected members inside the inheritance classes but not outside those.
 
+---
+
 ## Module 4
 
 ### Subtype polymorphism, Abstract classes & Interface

@@ -7,9 +7,9 @@ Exercices to learn C++ OOP, divided in 9 modules :
 - [x] Module 0 : class, member functions, stdio stream, initilization lists, static and const.
 - [x] Module 1 : memory allocation, references, pointers to members, switch.
 - [x] Module 2 : polymorphism ad-hoc, overloads, canonical class.
-- [ ] Module 3 : Inheritance.
-- [ ] Module 4 : Subtype Polymorphism, abstract class, interfaces.
-- [ ] Module 5 : not done yet
+- [x] Module 3 : Inheritance.
+- [x] Module 4 : Subtype Polymorphism, abstract class, interfaces.
+- [ ] Module 5 : Exceptions
 - [ ] Module 6 : not done yet
 - [ ] Module 7 : not done yet
 - [ ] Module 8 : not done yet
@@ -434,3 +434,145 @@ class	Child : public Father, public Mother {
 ```
 
 The *Child* class will have a single instance of the *Parent* class, shared by both *Father* and *Mother*. Also, we cannot access *private* members in a sub-sub-class from a base class. Here comes the access mode ```protected``` which allows the use of protected members inside the inheritance classes but not outside those.
+
+---
+
+## Module 4
+
+### Subtype polymorphism, Abstract classes & Interface
+
+What is *Polymorphism* ? In programming, polymorphism refers to the ability of a piece of code to behave differently depending on the context in which it is used. There are several forms of polymorphism :
+
+- *ad hoc polymorphism*, which refers to function overloading (see 2nd Module)
+- *parametric polymorphism*, in the form of templates
+- *subtype polymorphism*, wich allows a derived-class to be used where a base-class object is expected
+
+In this Module, we will see the 3rd form : *subtype polymophism*.
+
+```
+class Pokemon {
+	public:
+		Pokemon(){};
+		~Pokemon(){};
+		void	attack() {
+			std::cout << "Pokemon attacks." << std::endl;
+		};
+}
+
+class Charmander : public Pokemon {
+	public:
+		Charmander(){};
+		~Charmander(){};
+		void	attack() {
+			std::cout << "Charmander attacks." << std::endl;
+		};
+}
+
+int main() {
+	Pokemon *		a = new Charmander();
+
+	a->attack();
+	delete a;
+	return (0);
+}
+```
+
+In this situation, the output will be :
+>Pokemon attacks.
+
+But since we have *new Charmander()*, we wanted Charmander to attack. To fix this,
+we will use the same key word as seen in the previous Module : **virtual** so Charmander can attack.
+
+```
+class Pokemon {
+	public:
+		Pokemon(){};
+		~Pokemon(){};
+		virtual void	attack() {
+			std::cout << "Pokemon attacks." << std::endl;
+		};
+}
+
+class Charmander : public Pokemon {
+	public:
+		Charmander(){};
+		~Charmander(){};
+		virtual void	attack() {
+			std::cout << "Charmander attacks." << std::endl;
+		};
+}
+
+int main() {
+	Pokemon *		a = new Charmander();
+
+	a->attack();
+	delete a;
+	return (0);
+}
+```
+
+The output will now return an error. Indeed, we also need to make our destructor *virtual*! We just made a *virtual function*.
+
+What now, if we do not need our Pokemon to attack but Charmander yes? Every Pokemon can attack but 'Pokemon' itself do not need to.
+
+```
+class Pokemon {
+	public:
+		Pokemon(){};
+		virtual ~Pokemon(){};
+		virtual void	attack() = 0;
+}
+
+class Charmander : public Pokemon {
+	public:
+		Charmander(){};
+		~Charmander(){};
+		void	attack() {
+			std::cout << "Charmander attacks." << std::endl;
+		};
+}
+
+int main() {
+	Pokemon *		a = new Charmander();
+
+	a->attack();
+	delete a;
+	return (0);
+}
+```
+
+Here we set the *attack()* function to equal 0. From this moment, the virtual function *attack()* becomes a pure virtual function. And the class is now an *Abstract class*.
+
+A class is made *abstract* by declaring at least one its functions as *pure virtual* (specified by placing the "= 0"). The purpose of an *abstract class* is to provide an appropriate base class from which other classes inherit.
+Now, an *Interface* is an abstract class made with **only** pure virtual functions. It is used to provide/force Obj. Oriented System a common and standardized appopriate interface.
+
+---
+
+## Module 5
+
+### Exceptions
+
+Different errors can occur when executing a program : made by programmer, wring input, ... Here we will learn to throw an exception when it happens.
+
+There are 3 new key words :
+- *try*, allows to define a block of code to be tested for errors while being executed.
+- *throw*, throws an exception when a problem is detected, which let us create a custom error.
+- *catch*, allows to define a block of code to be executed, if an error occurs in the *try* block.
+
+```
+try {
+	int age = 15;
+	if (age >= 18) {
+		std::cout << "Access granted - you are old enough.";
+	} else {
+		throw (age);
+	}
+}
+catch (int myNum) {
+	cout << "Access denied - You must be at least 18 years old.\n";
+	cout << "Age is: " << myNum;
+}
+```
+
+
+

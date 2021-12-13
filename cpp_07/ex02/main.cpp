@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namenega <namenega@student.s19.be>         +#+  +:+       +#+        */
+/*   By: namenega <namenega@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 15:16:51 by namenega          #+#    #+#             */
-/*   Updated: 2021/12/06 12:58:39 by namenega         ###   ########.fr       */
+/*   Updated: 2021/12/09 15:17:08 by namenega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int main(int, char **)
 		mirror[i] = value;
 	}
 	std::cout << "\033[1;31mTEST 3\033[0m - Array with unsigned int as param : " << std::endl;
-	std::cout << "Size recieved : \033[1;36m" << MAX_VAL << "\033[0m" << std::endl;
+	std::cout << "Size received : \033[1;36m" << MAX_VAL << "\033[0m" << std::endl;
 	std::cout << "Size got: \033[1;36m" << numbers.size() << "\033[0m" << std::endl;
 	std::cout << std::endl;
 
